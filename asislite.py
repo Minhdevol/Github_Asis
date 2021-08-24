@@ -57,7 +57,7 @@ def detailsmod():
                 print("Asis_web-scraping details mode Interactive: 2")
                 print("Asis_open-app details mode Interactive:     3")
                 print("Asis: exit smart mode-[4]")
-                speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
+                speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
                 me = int(input("You: "))
                 if me == 4:
                     break
@@ -72,7 +72,7 @@ def detailsmod():
                     print("Kurzgesagt – In a Nutshell(6)    MixiGaming(14)    .........")
                     print("Shawn TFT(7)                     Phân Tích Game(15)")
                     print("TNC Channel(8)                   UnusualVideos(16) ")
-                    speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
+                    speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
                     while True:
                         ytc = int(input("You: "))
                         if ytc == 99:
@@ -83,7 +83,7 @@ def detailsmod():
                             print("One punch man(1)       Tensei shitara slime datta ken(2)  >NGUỒN: Muse Việt Nam")
                             print("You laugh you lose(3)  meme review(4)                     >NGUỒN: Pewdiepie")
                             print("thoát danh sách phát[99]")
-                            speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
+                            speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
                             while True:
                                 choice = int(input("You: "))
                                 if choice == 99:
@@ -158,7 +158,7 @@ def detailsmod():
                     print("Facebook(2)     Gmail(6)         .....")
                     print("Animehay.tv(3)  Google Earth(7)  .....")
                     print("Động Phim(4)    Shopee(8)        Về mục lựa chọn[99]")
-                    speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
+                    speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
                     while True:
                         short = int(input("You: "))
                         if short == 99:
@@ -204,7 +204,7 @@ def detailsmod():
                     print("Google Chorme(1)       Garena(4)                       ...........")
                     print("Microsoft Egde(2)      League of Legends PBE(5)        Về lựa chọn mode[99]")
                     print("Albion Online(3)       Discord(6)")
-                    speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
+                    speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
                     while True:
                         choice = int(input("You: "))
                         if choice == 99:
