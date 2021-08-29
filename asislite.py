@@ -1,6 +1,6 @@
 from datetime import date
 from datetime import datetime 
-from random import randint
+import random
 import webbrowser
 import subprocess
 import os
@@ -155,7 +155,7 @@ def detailsmod():
                 elif me == 2:
                     speak("Hãy nhập qua kí hiệu (số), từ các danh mục tiện lợi dược viết sẵn:")
                     print("Wikipedia(1)    Phim Hàn(5)      Nonolive(9)")
-                    print("Facebook(2)     Gmail(6)         .....")
+                    print("Facebook(2)     Gmail(6)         du lịch online(10)")
                     print("Animehay.tv(3)  Google Earth(7)  .....")
                     print("Động Phim(4)    Shopee(8)        Về mục lựa chọn[99]")
                     speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
@@ -197,6 +197,9 @@ def detailsmod():
                         elif short == 9:
                             speak("Nonolive đang mở")
                             webbrowser.open("https://www.nonolive.com/69696969?fbclid=IwAR0b5nheeYMGnSHWbHZWpr9UKqn8eGt4G438R9vEuqt3m5i0gWYk4vGmcOQ")
+                        elif short == 10:
+                            speak("Du lịch online đang mở")
+                            webbrowser.open("https://lifeat.io")
                         else:
                             speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
                 elif me == 3:
@@ -264,67 +267,56 @@ def youtube():
         webbrowser.get().open(url)
         speak(f"Đây là kết quả mà tôi tìm kiếm được, với từ khóa {search}")
         speak("[hủy tìm kiếm] nếu bạn không muốn tiếp tục tìm kiếm qua youtube")
+def get_choices(choice):
+    if choice == "B":
+        return "Búa"
+    elif choice == "G":
+        return "Giấy"
+    elif choice == "K":
+        return "Kéo"
+    else:
+        return speak("Không đúng với từ khóa đã cho!")
 def game():
-    speak("Tôi có trò búa kéo bao, bạn có muốn chơi")
-    speak("[có] hoặc [không]")
-    player = input("You: ").lower()
-    if "có" in player:
-        while True:
-            speak("Bạn chọn búa kéo hay bao?")
-            player = input("You: ").lower()
-            computer = randint(0,2)
-            if computer == 0:
-                computer = "búa"
-            if computer == 1:
-                computer = "kéo"
-            if computer == 2:
-                computer = "bao"
-            if "hủy trò chơi" in player:
-                speak("Bạn muốn làm gì tiếp?")
-                break
-            
-            print("////////////////")
-            print("Bạn chọn :" + player + "///")
-            print("Asis chọn:" + computer +"///")
-            print("////////////////")
-            speak(f"Bạn chọn {player} Asis chọn {computer}")
-            
-            if player == computer:
-                reslut = "kết quả bạn HÒA"
-                speak(reslut)
-                speak("[hủy trò chơi] nếu bạn không chơi tiếp")
+    speak("Chào mừng đến với trò búa giấy kéo!")
+    speak("[B] là búa, [G] là giấy, [K] là kéo và [Q] là thoát trò chơi")
+
+    choices = ["B", "G", "K"]
+    counter = 1
+    game_on = True
+
+    while game_on:
+        speak(f"Trận {counter}. Xin bạn hãy nhập lựa chọn: ")
+        người_chơi = input("You: ")
+        người_chơi = người_chơi.upper()
+
+        if người_chơi == "Q":
+            speak("Cảm ơn vì đã tham gia trò chơi!")
+            game_on = False 
+        else:
+            random_index = random.randint(0,2)
+            máy_chơi = choices[random_index]
+
+            speak(f"Bạn chọn {get_choices(người_chơi)} và máy chọn {get_choices(máy_chơi)}")
+
+            if người_chơi == "B" and máy_chơi == "K":
+                speak("Chúc mừng, bạn Thắng. Búa đập Kéo")
+            elif người_chơi == "K" and máy_chơi == "G":
+                speak("Chúc mừng, bạn Thắng. Kéo cắt Giấy")
+            elif người_chơi == "G" and máy_chơi == "B":
+                speak("Chúc mừng, bạn Thắng. Giấy bọc Búa")
+            elif người_chơi == "B" and máy_chơi == "G":
+                speak("Rất tiếc, máy Thắng. Giấy bọc Búa")
+            elif người_chơi == "K" and máy_chơi == "B":
+                speak("Rất tiếc, máy Thắng. Búa đập Kéo")
+            elif người_chơi == "G" and máy_chơi == "K":
+                speak("Rất tiếc, máy Thắng. Kéo cắt Giấy")
+            elif người_chơi == máy_chơi:
+                speak(f"Oh! Bạn với máy Hòa. với lựa chọn trùng là {get_choices(người_chơi)}")
             else:
-                if player == "búa":
-                    if computer == "kéo":
-                        reslut = "kết quả bạn THẮNG"
-                        speak(reslut)
-                        speak("[hủy trò chơi] nếu bạn không chơi tiếp")
-                    else:
-                        reslut = "kết quả bạn THUA"
-                        speak(reslut)
-                        speak("[hủy trò chơi] nếu bạn không chơi tiếp")
-                elif player == "kéo":
-                    if computer == "búa":
-                        reslut = "kết quả bạn THUA"
-                        speak(reslut)
-                        speak("[hủy trò chơi] nếu bạn không chơi tiếp")
-                    else:
-                        reslut = "kết quả bạn THẮNG"
-                        speak(reslut)
-                        speak("[hủy trò chơi] nếu bạn không chơi tiếp")
-                elif player == "bao":
-                    if computer == "búa":
-                        reslut = "kết quả bạn THẮNG"
-                        speak(reslut)
-                        speak("[hủy trò chơi] nếu bạn không chơi tiếp")
-                    else:
-                        reslut = "kết quả bạn THUA"
-                        speak(reslut)
-                        speak("[hủy trò chơi] nếu bạn không chơi tiếp")
-                else:
-                    speak("Bạn đang nhập từ khóa khác với trò chơi!")
-    elif "không" in player:
-        speak("Bạn muốn làm gì tiếp?")
+                speak("Hãy nhập từ khóa đã cho là [B], [G], [K] và [Q]")
+
+            counter+=1
+        print("-"*45)
 def bye():
     hour = datetime.now().hour
     if hour >=6 and hour<12:
@@ -358,6 +350,7 @@ if __name__ =="__main__":
             ngày()
         elif "trò chơi" in you:
             game()
+            speak("Bạn muốn làm gì tiếp?")
         elif "giờ" in you:
             thời_gian()
         elif "thời gian" in you:
