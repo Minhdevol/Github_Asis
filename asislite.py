@@ -44,46 +44,37 @@ def shutdownprograms():
         else:
             speak("Hãy nhập với mệnh lệnh được cho sẵn là [có] hoặc [không]")
 def detailsmod():
-    while True:
-        speak("Bạn có muốn lựa chọn chế độ từ khóa thông minh:")
-        speak("[có] hoặc [không]")
-        u = input("You: ").lower()
-        if "có" in u:
             while True:
                 speak("Chế độ từ khóa thông minh được [thiết lập]")
-                print("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=")
+                print("="*50)
                 speak("Hãy chọn chế độ với từ khóa được viết sẵn:")
-                print("Asis_youtube details mode Interactive:      1")
-                print("Asis_web-scraping details mode Interactive: 2")
-                print("Asis_open-app details mode Interactive:     3")
-                print("Asis: exit smart mode-[4]")
-                speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
+                print("[1]_Youtube details mode Interactive")
+                print("[2]_Web-scraping details mode Interactive")
+                print("[3]_Open-app details mode Interactive")
+                print("[4]_Exit mode")
                 me = int(input("You: "))
                 if me == 4:
+                    speak("Bạn muốn làm gì tiếp?")
                     break
                 elif me == 1:
-                    speak("Hãy nhập kênh channel youtube, bằng kí hiệu (số)")
-                    print("Asis: Thư viện Asis_youtube: Youtube Channel: ")
+                    speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
                     print("Trực Tiếp Game(1)                Vandiril(9)       Danh sách phim[98]")
-                    print("Muse Việt Nam(2)                 GEARVN(10)        Về mục lựa chọn mode[99]")
+                    print("Muse Việt Nam(2)                 GEARVN(10)        Về mục lựa chọn[99]")
                     print("Pewdiepie(3)                     Lemuria TFT(11)   .........")
                     print("AMTECH Studio(4)                 meGAME(12)        .........")
                     print("League of Legends(5)             AnhEm TV(13)      .........")
                     print("Kurzgesagt – In a Nutshell(6)    MixiGaming(14)    .........")
                     print("Shawn TFT(7)                     Phân Tích Game(15)")
                     print("TNC Channel(8)                   UnusualVideos(16) ")
-                    speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
                     while True:
                         ytc = int(input("You: "))
                         if ytc == 99:
                             break
                         elif ytc == 98:
-                            speak("Hãy nhập danh sách phim trên youtube, bằng kí hiệu (số)")
-                            print("Asis: Thư viện danh sách từ các kênh channel Youtube:")
+                            speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
                             print("One punch man(1)       Tensei shitara slime datta ken(2)  >NGUỒN: Muse Việt Nam")
                             print("You laugh you lose(3)  meme review(4)                     >NGUỒN: Pewdiepie")
                             print("thoát danh sách phát[99]")
-                            speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
                             while True:
                                 choice = int(input("You: "))
                                 if choice == 99:
@@ -153,12 +144,12 @@ def detailsmod():
                         else:
                             speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
                 elif me == 2:
-                    speak("Hãy nhập qua kí hiệu (số), từ các danh mục tiện lợi dược viết sẵn:")
+                    speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
                     print("Wikipedia(1)    Phim Hàn(5)      Nonolive(9)")
-                    print("Facebook(2)     Gmail(6)         du lịch online(10)")
-                    print("Animehay.tv(3)  Google Earth(7)  .....")
-                    print("Động Phim(4)    Shopee(8)        Về mục lựa chọn[99]")
-                    speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
+                    print("Facebook(2)     Gmail(6)         Du lịch online(10)")
+                    print("Animehay.tv(3)  Google Earth(7)  Zalo(11)")
+                    print("Động Phim(4)    Shopee(8)        Python class(12)")
+                    print("...........     ............     Về mục lựa chọn[99]")
                     while True:
                         short = int(input("You: "))
                         if short == 99:
@@ -200,14 +191,19 @@ def detailsmod():
                         elif short == 10:
                             speak("Du lịch online đang mở")
                             webbrowser.open("https://lifeat.io")
+                        elif short == 11:
+                            speak("Zalo đang mở")
+                            webbrowser.open("https://chat.zalo.me/")
+                        elif short == 12:
+                            speak("Chương trình dạy học Python đang mở")
+                            webbrowser.open("https://www.howkteam.vn/course/lap-trinh-python-co-ban-37") 
                         else:
                             speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
                 elif me == 3:
-                    speak("Hãy nhập kí hiệu (số), với từ khóa được viết sẵn")
-                    print("Google Chorme(1)       Garena(4)                       ...........")
-                    print("Microsoft Egde(2)      League of Legends PBE(5)        Về lựa chọn mode[99]")
-                    print("Albion Online(3)       Discord(6)")
-                    speak("BẠN CHỈ NÊN NHẬP KÍ HIỆU (SỐ) ĐÃ CHO SẴN Ở THƯ VIỆN, LỖI SẼ XẢY NẾU BẠN GÕ CHỮ")
+                    speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
+                    print("Google Chorme(1)       Garena(4)                       Zoom(7)")
+                    print("Microsoft Egde(2)      League of Legends PBE(5)        ........")
+                    print("Albion Online(3)       Discord(6)                      Về mục lựa chọn[99]")
                     while True:
                         choice = int(input("You: "))
                         if choice == 99:
@@ -236,15 +232,103 @@ def detailsmod():
                             speak("Discord đang mở")
                             cmd = "C:/Users/this pc/AppData/Local/Discord/app-1.0.9002/Discord.exe"
                             result = subprocess.run(cmd, shell=True)
+                        elif choice == 7:
+                            speak("Zoom đang mở")
+                            cmd = "C:/Users/this pc/AppData/Roaming/Zoom/bin/Zoom.exe"
+                            result = subprocess.run(cmd, shell=True)
+                        else:
+                            speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
+                elif me == 5:
+                    while True:
+                        speak("Mở kép giữa hai kiểu dữ liệu được mở ở mục ẩn")
+                        speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
+                        print("Học online(1)       Cờ giải trí[LMHT_VN]_(3)      ......")
+                        print("Viết học code(2)    Cờ giải trí[LMHT_PBE]_(4)     ......")
+                        print("........            .......                       Về mục lựa chọn[99]")
+                        coder = int(input("You: "))
+                        if coder == 99:
+                            break
+                        elif coder == 1:
+                            speak("Đang mở")
+                            webbrowser.open("https://chat.zalo.me/")
+                            cmd = "C:/Users/this pc/AppData/Roaming/Zoom/bin/Zoom.exe"
+                            result = subprocess.run(cmd, shell=True)
+                            speak("Hãy nhập môn học bằng kí hiệu [số] để kích hoạt: ")
+                            print("Đại số(1)       Ngữ văn[tập 1]_(5)      .....")
+                            print("Hình học(2)     Ngữ văn[tập_2]_(6)      .....")
+                            print("Vật lí(3)       Lịch sử(7)              Về mục lựa chọn[99]")
+                            print("Hóa học(4)      Địa lí(8)")
+                            print("Sinh học(9)     Giáo dục công dân(10)")
+                            while True:
+                                study = int(input("You: "))
+                                if study == 99:
+                                    break
+                                elif study == 1:
+                                    speak("Đại số đang mở")
+                                    cmd = "D:/SGK 11/đại.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                elif study == 2:
+                                    speak("Hình học đang mở")
+                                    cmd = "D:/SGK 11/hình.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                elif study == 3:
+                                    speak("Vật lí đang mở")
+                                    cmd = "D:/SGK 11/lý.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                elif study == 4:
+                                    speak("Hóa học đang mở")
+                                    cmd = "D:/SGK 11/hóa.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                elif study == 5:
+                                    speak("Ngữ văn tập 1 đang mở")
+                                    cmd = "D:/SGK 11/văn1.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                elif study == 6:
+                                    speak("Ngữ văn tập 2 đang mở")
+                                    cmd = "D:/SGK 11/văn2.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                elif study == 7:
+                                    speak("Lịch sử đang mở")
+                                    cmd = "D:/SGK 11/sử.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                elif study == 8:
+                                    speak("Địa lí đang mở")
+                                    cmd = "D:/SGK 11/địa.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                elif study == 9:
+                                    speak("Sinh học đang mở")
+                                    cmd = "D:/SGK 11/sinh.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                elif study == 10:
+                                    speak("Giáo dục công dân đang mở")
+                                    cmd = "D:/SGK 11/gdcd.pdf"
+                                    result = subprocess.run(cmd, shell=True)
+                                else:
+                                    speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
+                        elif coder == 2:
+                                speak("Đang mở")
+                                cmd = "C:/Users/this pc/AppData/Local/Programs/Microsoft VS Code/Code.exe"
+                                result = subprocess.run(cmd, shell=True)
+                                webbrowser.open("https://www.howkteam.vn/course/lap-trinh-python-co-ban-37")
+                                webbrowser.open("https://github.com/")
+                                cmd = "C:/Program Files/Google/Chrome/Application/chrome.exe"
+                                result = subprocess.run(cmd, shell=True)
+                        elif coder == 3:
+                            speak("Đang mở")
+                            cmd = "C:/Program Files (x86)/Garena/Garena/Garena.exe"
+                            result = subprocess.run(cmd, shell=True)
+                            webbrowser.open("https://www.facebook.com/")
+                            webbrowser.open("https://www.youtube.com/")
+                        elif coder == 4:
+                            speak("Đang mở")
+                            cmd = "D:/Riot Games/Riot Client/RiotClientServices.exe"
+                            result = subprocess.run(cmd, shell=True)
+                            webbrowser.open("https://www.facebook.com/")
+                            webbrowser.open("https://www.youtube.com/")
                         else:
                             speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
                 else:
                     speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
-        elif "không" in u:
-            speak("Bạn muốn làm gì tiếp?")
-            break
-        else:
-            speak("Xin hãy nhập đúng từ khóa [có] hoặc [không]")
 def google():
     speak("Bạn muốn tìm kiếm gì ở google?")
     while True:
