@@ -55,7 +55,7 @@ def detailsmod():
                 print("[2]_Web-scraping details mode Interactive")
                 print("[3]_Open-app details mode Interactive")
                 print("[4]_Exit mode")
-                me = input("You: ")
+                me = int(input("You: "))
                 if me == 4:
                     speak("Bạn muốn làm gì tiếp?")
                     break
