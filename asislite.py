@@ -45,6 +45,9 @@ def shutdownprograms():
             speak("Hãy nhập với mệnh lệnh được cho sẵn là [có] hoặc [không]")
 def detailsmod():
             while True:
+                muc = "Xin hãy nhập đúng kí hiệu (số) đã cho"
+                thit = "Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: "
+                nec = "đang mở"
                 speak("Chế độ từ khóa thông minh được [thiết lập]")
                 print("="*50)
                 speak("Hãy chọn chế độ với từ khóa được viết sẵn:")
@@ -57,7 +60,7 @@ def detailsmod():
                     speak("Bạn muốn làm gì tiếp?")
                     break
                 elif me == 1:
-                    speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
+                    speak(f"{thit}")
                     print("Trực Tiếp Game(1)                Vandiril(9)       Danh sách phim[98]")
                     print("Muse Việt Nam(2)                 GEARVN(10)        Về mục lựa chọn[99]")
                     print("Pewdiepie(3)                     Lemuria TFT(11)   .........")
@@ -67,11 +70,12 @@ def detailsmod():
                     print("Shawn TFT(7)                     Phân Tích Game(15)")
                     print("TNC Channel(8)                   UnusualVideos(16) ")
                     while True:
+                        fcg = "Kênh channel"
                         ytc = int(input("You: "))
                         if ytc == 99:
                             break
                         elif ytc == 98:
-                            speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
+                            speak(f"{thit}")
                             print("One punch man(1)       Tensei shitara slime datta ken(2)  >NGUỒN: Muse Việt Nam")
                             print("You laugh you lose(3)  meme review(4)                     >NGUỒN: Pewdiepie")
                             print("thoát danh sách phát[99]")
@@ -80,71 +84,71 @@ def detailsmod():
                                 if choice == 99:
                                     break
                                 elif choice == 1:
-                                    speak("Danh sách phim one punch man đang mở")
+                                    speak(f"Danh sách phim one punch man {nec}")
                                     webbrowser.open("https://www.youtube.com/playlist?list=PLdM751AKK4aNByWA9qP5XI2haBXOo9tAt")
                                 elif choice == 2:
-                                    speak("Danh sách phim Tensei shitara slime datta ken đang mở")
+                                    speak(f"Danh sách phim Tensei shitara slime datta ken {nec}")
                                     webbrowser.open("https://www.youtube.com/playlist?list=PLdM751AKK4aNYfKgHcH0AV42Per56uAXH")
                                 elif choice == 3:
-                                    speak("Danh sách phát You laugh you lose đang mở")
+                                    speak(f"Danh sách phát You laugh you lose {nec}")
                                     webbrowser.open("https://www.youtube.com/playlist?list=PLYH8WvNV1YEm6ETE_AS0nV2sKIsU2cUPW")
                                 elif choice == 4:
-                                    speak("Danh sách phát meme review đang mở")
+                                    speak(f"Danh sách phát meme review {nec}")
                                     webbrowser.open("https://www.youtube.com/playlist?list=PLYH8WvNV1YEn_iiBMZiZ2aWugQfN1qVfM")
                                 else:
-                                    speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
+                                    speak(f"{muc}")
                         elif ytc == 16:
-                            speak("Kênh channel UnusualVideos đang mở")
+                            speak(f"{fcg} UnusualVideos {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCpnkp_D4FLPCiXOmDhoAeYA")
                         elif ytc == 15:
-                            speak("Kênh channel Phân Tích Game đang mở")
+                            speak(f"{fcg} Phân Tích Game {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCAmiHmhyH7irW2Yr_RoI0uA")
                         elif ytc == 14:
-                            speak("Kênh channel MixiGaming đang mở")
+                            speak(f"{fcg} MixiGaming {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCA_23dkEYToAc37hjSsCnXA")
                         elif ytc == 13:
-                            speak("Kênh channel AnhEm TV đang mở")
+                            speak(f"{fcg} AnhEm TV {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCDri2yZO_tqdD70bK-D7iQg")
                         elif ytc == 12:
-                            speak("Kênh channel meGAME đang mở")
+                            speak(f"{fcg} meGAME {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCT9aAKhmaMLO8QxmHrAzSXA")
                         elif ytc == 11:
-                            speak("Kênh channel Lemuria TFT đang mở")
+                            speak(f"{fcg} Lemuria TFT {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCi0fnpTfSmdH76N6MNgPdEQ")
                         elif ytc == 10:
-                            speak("Kênh channel GEARVN đang mở")
+                            speak(f"{fcg} GEARVN {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCdxRpD_T4-HzPsely-Fcezw")
                         elif ytc == 9:
-                            speak("Kênh channel Vandiril đang mở")
+                            speak(f"{fcg} Vandiril {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCZ-oWkpMnHjTJpeOOlD80OA")
                         elif ytc == 8:
-                            speak("Kênh channel TNC Channel đang mở")
+                            speak(f"{fcg} TNC Channel {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCvLGkK-wBBaoXwV71Tgx08Q")
                         elif ytc == 7:
-                            speak("Kênh channel Shawn TFT đang mở")
+                            speak(f"{fcg} Shawn TFT {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UC4_xpnCfHTwDJ49WXHQquug")
                         elif ytc == 6:
-                            speak("Kênh channel Kurzgesagt – In a Nutshell đang mở")
+                            speak(f"{fcg} Kurzgesagt – In a Nutshell {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q")
                         elif ytc == 5:
-                            speak("Kênh channel League of Legends đang mở")
+                            speak(f"{fcg} League of Legends {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UC2t5bjwHdUX4vM2g8TRDq5g")
                         elif ytc == 4:
-                            speak("Kênh channel AMTECH Studio đang mở")
+                            speak(f"{fcg} AMTECH Studio {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCJ9nxbwgqwwjWuGTQPekeTQ")
                         elif ytc == 3:
-                            speak("kênh channel Pewdiepie đang mở")
+                            speak(f"{fcg} Pewdiepie {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UC-lHJZR3Gqxm24_Vd_AJ5Yw")
                         elif ytc == 2:
-                            speak("Kênh channel Muse Việt Nam đang mở")
+                            speak(f"{fcg} Muse Việt Nam {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCott96qGP5ADmsB_yNQMvDA")
                         elif ytc == 1:   
-                            speak("Kênh channel Trực Tiếp Game đang mở")
+                            speak(f"{fcg} Trực Tiếp Game {nec}")
                             webbrowser.open("https://www.youtube.com/channel/UCc_gMV4N9vJtpy7GcMUHaVw")                 
                         else:
-                            speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
+                            speak(f"{muc}")
                 elif me == 2:
-                    speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
+                    speak(f"{thit}")
                     print("Wikipedia(1)    Phim Hàn(5)      Nonolive(9)")
                     print("Facebook(2)     Gmail(6)         Du lịch online(10)")
                     print("Animehay.tv(3)  Google Earth(7)  Zalo(11)")
@@ -163,44 +167,44 @@ def detailsmod():
                                 else:
                                     timkiem = wiki.page(f'{noidung}')
                                     speak(timkiem.summary)
-                                    speak("[ngừng wiki] nếu bạn muốn thoát và ngừng dùng wikipedia")
+                                    speak("[ngừng wiki] nếu bạn muốn thoát")
                         elif short == 2:
-                            speak("Facebook đang mở")
+                            speak(f"Facebook {nec}")
                             webbrowser.open("https://www.facebook.com/")
                         elif short == 3:
-                            speak("Anime hay đang mở")
+                            speak(f"Anime hay {nec}")
                             webbrowser.open("https://animehay.tv/")
                         elif short == 4:
-                            speak("Động Phim đang mở")
+                            speak(f"Động Phim {nec}")
                             webbrowser.open("https://dongphym.com/")
                         elif short ==5:
-                            speak("Phim Hàn đang mở")
+                            speak(f"Phim Hàn {nec}")
                             webbrowser.open("http://www.phymhan.com/")
                         elif short == 6:
-                            speak("Gmail đang mở")
+                            speak(f"Gmail {nec}")
                             webbrowser.open("https://mail.google.com/mail/u/0/#inbox")
                         elif short == 7:
-                            speak("Google Earth đang mở")
+                            speak(f"Google Earth {nec}")
                             webbrowser.open("https://earth.google.com/web/@12.37269667,109.44710412,-4095.49886217a,8155037.67908692d,35y,3.73110197h,0t,0r")
                         elif short == 8:
-                            speak("Shopee đang mở")
+                            speak(f"Shopee {nec}")
                             webbrowser.open("https://shopee.vn/?utm_source=an_17209090000&utm_medium=affiliates&utm_campaign=4jcz9mgzpk8w-&utm_content=c7cd9271b3af48eba1c1d89f0bf322a7-34745-101654&af_siteid=an_17209090000&pid=affiliates&c=4jcz9mgzpk8w-&af_click_lookback=7d&af_viewthrough_lookback=1d&is_retargeting=true&af_reengagement_window=7d&af_sub_siteid=c7cd9271b3af48eba1c1d89f0bf322a7-34745-101654")
                         elif short == 9:
-                            speak("Nonolive đang mở")
+                            speak(f"Nonolive {nec}")
                             webbrowser.open("https://www.nonolive.com/69696969?fbclid=IwAR0b5nheeYMGnSHWbHZWpr9UKqn8eGt4G438R9vEuqt3m5i0gWYk4vGmcOQ")
                         elif short == 10:
-                            speak("Du lịch online đang mở")
+                            speak(f"Du lịch online {nec}")
                             webbrowser.open("https://lifeat.io")
                         elif short == 11:
-                            speak("Zalo đang mở")
+                            speak(f"Zalo {nec}")
                             webbrowser.open("https://chat.zalo.me/")
                         elif short == 12:
-                            speak("Chương trình dạy học Python đang mở")
+                            speak(f"Chương trình dạy học Python {nec}")
                             webbrowser.open("https://www.howkteam.vn/course/lap-trinh-python-co-ban-37") 
                         else:
-                            speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
+                            speak(f"{muc}")
                 elif me == 3:
-                    speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
+                    speak(f"{thit}")
                     print("Google Chorme(1)       Garena(4)                       Zoom(7)")
                     print("Microsoft Egde(2)      League of Legends PBE(5)        ........")
                     print("Albion Online(3)       Discord(6)                      Về mục lựa chọn[99]")
@@ -209,39 +213,40 @@ def detailsmod():
                         if choice == 99:
                             break
                         elif choice == 1:
-                            speak("Trình duyệt Google Chrome đang mở")
+                            speak(f"Trình duyệt Google Chrome {nec}")
                             cmd = "C:/Program Files/Google/Chrome/Application/chrome.exe"
                             result = subprocess.run(cmd, shell=True)
                         elif choice == 2:
-                            speak("Trình duyệt Microsoft Egde đang mở")
+                            speak(f"Trình duyệt Microsoft Egde {nec}")
                             cmd = "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe"
                             result = subprocess.run(cmd, shell=True)
                         elif choice == 3:
-                            speak("Albion Online đang mở")
+                            speak(f"Albion Online {nec}")
                             cmd = "D:/LITTE GAME/launcher/AlbionLauncher.exe"
                             result = subprocess.run(cmd, shell=True)
                         elif choice == 4:
-                            speak("Garena đang mở")
+                            speak(f"Garena {nec}")
                             cmd = "C:/Program Files (x86)/Garena/Garena/Garena.exe"
                             result = subprocess.run(cmd, shell=True)
                         elif choice == 5:
-                            speak("Liên Minh Huyền Thoại P.B.E đang mở")
+                            speak(f"Liên Minh Huyền Thoại P.B.E {nec}")
                             cmd = "D:/Riot Games/Riot Client/RiotClientServices.exe"
                             result = subprocess.run(cmd, shell=True)
                         elif choice == 6:
-                            speak("Discord đang mở")
+                            speak(f"Discord {nec}")
                             cmd = "C:/Users/this pc/AppData/Local/Discord/app-1.0.9002/Discord.exe"
                             result = subprocess.run(cmd, shell=True)
                         elif choice == 7:
-                            speak("Zoom đang mở")
+                            speak(f"Zoom {nec}")
                             cmd = "C:/Users/this pc/AppData/Roaming/Zoom/bin/Zoom.exe"
                             result = subprocess.run(cmd, shell=True)
                         else:
-                            speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
+                            speak(f"{muc}")
                 elif me == 5:
                     while True:
+                        necc = "Đang mở"
                         speak("Mở kép giữa hai kiểu dữ liệu được mở ở mục ẩn")
-                        speak("Đây là thư viện đã cho, hãy nhập kí hiệu [số] để kích hoạt: ")
+                        speak(f"{thit}")
                         print("Học online(1)       Cờ giải trí[LMHT_VN]_(3)      ......")
                         print("Viết học code(2)    Cờ giải trí[LMHT_PBE]_(4)     ......")
                         print("........            .......                       Về mục lựa chọn[99]")
@@ -249,7 +254,7 @@ def detailsmod():
                         if coder == 99:
                             break
                         elif coder == 1:
-                            speak("Đang mở")
+                            speak(necc)
                             webbrowser.open("https://chat.zalo.me/")
                             cmd = "C:/Users/this pc/AppData/Roaming/Zoom/bin/Zoom.exe"
                             result = subprocess.run(cmd, shell=True)
@@ -264,49 +269,49 @@ def detailsmod():
                                 if study == 99:
                                     break
                                 elif study == 1:
-                                    speak("Đại số đang mở")
+                                    speak(f"Đại số {nec}")
                                     cmd = "D:/SGK 11/đại.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 elif study == 2:
-                                    speak("Hình học đang mở")
+                                    speak(f"Hình học {nec}")
                                     cmd = "D:/SGK 11/hình.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 elif study == 3:
-                                    speak("Vật lí đang mở")
+                                    speak(f"Vật lí {nec}")
                                     cmd = "D:/SGK 11/lý.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 elif study == 4:
-                                    speak("Hóa học đang mở")
+                                    speak(f"Hóa học {nec}")
                                     cmd = "D:/SGK 11/hóa.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 elif study == 5:
-                                    speak("Ngữ văn tập 1 đang mở")
+                                    speak(f"Ngữ văn tập 1 {nec}")
                                     cmd = "D:/SGK 11/văn1.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 elif study == 6:
-                                    speak("Ngữ văn tập 2 đang mở")
+                                    speak(f"Ngữ văn tập 2 {nec}")
                                     cmd = "D:/SGK 11/văn2.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 elif study == 7:
-                                    speak("Lịch sử đang mở")
+                                    speak(f"Lịch sử {nec}")
                                     cmd = "D:/SGK 11/sử.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 elif study == 8:
-                                    speak("Địa lí đang mở")
+                                    speak(f"Địa lí {nec}")
                                     cmd = "D:/SGK 11/địa.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 elif study == 9:
-                                    speak("Sinh học đang mở")
+                                    speak(f"Sinh học {nec}")
                                     cmd = "D:/SGK 11/sinh.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 elif study == 10:
-                                    speak("Giáo dục công dân đang mở")
+                                    speak(f"Giáo dục công dân {nec}")
                                     cmd = "D:/SGK 11/gdcd.pdf"
                                     result = subprocess.run(cmd, shell=True)
                                 else:
-                                    speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
+                                    speak(f"{muc}")
                         elif coder == 2:
-                                speak("Đang mở")
+                                speak(necc)
                                 cmd = "C:/Users/this pc/AppData/Local/Programs/Microsoft VS Code/Code.exe"
                                 result = subprocess.run(cmd, shell=True)
                                 webbrowser.open("https://www.howkteam.vn/course/lap-trinh-python-co-ban-37")
@@ -314,21 +319,21 @@ def detailsmod():
                                 cmd = "C:/Program Files/Google/Chrome/Application/chrome.exe"
                                 result = subprocess.run(cmd, shell=True)
                         elif coder == 3:
-                            speak("Đang mở")
+                            speak(necc)
                             cmd = "C:/Program Files (x86)/Garena/Garena/Garena.exe"
                             result = subprocess.run(cmd, shell=True)
                             webbrowser.open("https://www.facebook.com/")
                             webbrowser.open("https://www.youtube.com/")
                         elif coder == 4:
-                            speak("Đang mở")
+                            speak(necc)
                             cmd = "D:/Riot Games/Riot Client/RiotClientServices.exe"
                             result = subprocess.run(cmd, shell=True)
                             webbrowser.open("https://www.facebook.com/")
                             webbrowser.open("https://www.youtube.com/")
                         else:
-                            speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
+                            speak(f"{muc}")
                 else:
-                    speak("Xin hãy nhập đúng kí hiệu (số) đã cho")
+                    speak(f"{muc}")
 def google():
     speak("Bạn muốn tìm kiếm gì ở google?")
     while True:
