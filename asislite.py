@@ -55,7 +55,7 @@ def detailsmod():
                 print("[2]_Web-scraping details mode Interactive")
                 print("[3]_Open-app details mode Interactive")
                 print("[4]_Exit mode")
-                me = int(input("You: "))
+                me = input("You: ")
                 if me == 4:
                     speak("Bạn muốn làm gì tiếp?")
                     break
@@ -453,7 +453,7 @@ if __name__ =="__main__":
         elif "tắt laptop" in you:
             shutdownprograms()
         else:
-            speak(f"Từ khóa {you} này không nằm trong khả năng của tôi")
+            speak(f"Từ khóa [{you}] này không nằm trong khả năng của tôi")
             speak("Bạn muốn làm gì tiếp?")
         
         
