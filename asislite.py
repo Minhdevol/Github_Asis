@@ -247,69 +247,12 @@ def detailsmod():
                         necc = "Đang mở"
                         speak("Mở kép giữa hai kiểu dữ liệu được mở ở mục ẩn")
                         speak(f"{thit}")
-                        print("Học online(1)       Cờ giải trí[LMHT_VN]_(3)      ......")
+                        print("#(1)                Cờ giải trí[LMHT_VN]_(3)      ......")
                         print("Viết học code(2)    Cờ giải trí[LMHT_PBE]_(4)     ......")
                         print("........            .......                       Về mục lựa chọn[99]")
                         coder = int(input("You: "))
                         if coder == 99:
                             break
-                        elif coder == 1:
-                            speak(necc)
-                            webbrowser.open("https://chat.zalo.me/")
-                            cmd = "C:/Users/this pc/AppData/Roaming/Zoom/bin/Zoom.exe"
-                            result = subprocess.run(cmd, shell=True)
-                            speak("Hãy nhập môn học bằng kí hiệu [số] để kích hoạt: ")
-                            print("Đại số(1)       Ngữ văn[tập 1]_(5)      .....")
-                            print("Hình học(2)     Ngữ văn[tập_2]_(6)      .....")
-                            print("Vật lí(3)       Lịch sử(7)              Về mục lựa chọn[99]")
-                            print("Hóa học(4)      Địa lí(8)")
-                            print("Sinh học(9)     Giáo dục công dân(10)")
-                            while True:
-                                study = int(input("You: "))
-                                if study == 99:
-                                    break
-                                elif study == 1:
-                                    speak(f"Đại số {nec}")
-                                    cmd = "D:/SGK 11/đại.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                elif study == 2:
-                                    speak(f"Hình học {nec}")
-                                    cmd = "D:/SGK 11/hình.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                elif study == 3:
-                                    speak(f"Vật lí {nec}")
-                                    cmd = "D:/SGK 11/lý.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                elif study == 4:
-                                    speak(f"Hóa học {nec}")
-                                    cmd = "D:/SGK 11/hóa.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                elif study == 5:
-                                    speak(f"Ngữ văn tập 1 {nec}")
-                                    cmd = "D:/SGK 11/văn1.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                elif study == 6:
-                                    speak(f"Ngữ văn tập 2 {nec}")
-                                    cmd = "D:/SGK 11/văn2.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                elif study == 7:
-                                    speak(f"Lịch sử {nec}")
-                                    cmd = "D:/SGK 11/sử.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                elif study == 8:
-                                    speak(f"Địa lí {nec}")
-                                    cmd = "D:/SGK 11/địa.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                elif study == 9:
-                                    speak(f"Sinh học {nec}")
-                                    cmd = "D:/SGK 11/sinh.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                elif study == 10:
-                                    speak(f"Giáo dục công dân {nec}")
-                                    cmd = "D:/SGK 11/gdcd.pdf"
-                                    result = subprocess.run(cmd, shell=True)
-                                else:
-                                    speak(f"{muc}")
                         elif coder == 2:
                                 speak(necc)
                                 cmd = "C:/Users/this pc/AppData/Local/Programs/Microsoft VS Code/Code.exe"
