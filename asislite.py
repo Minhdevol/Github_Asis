@@ -51,24 +51,14 @@ def detailsmod():
                 speak("Chế độ từ khóa thông minh được [thiết lập]")
                 print("="*50)
                 speak("Hãy chọn chế độ với từ khóa được viết sẵn:")
-                print("[1]_Youtube details mode Interactive")
-                print("[2]_Web-scraping details mode Interactive")
-                print("[3]_Open-app details mode Interactive")
-                print("[4]_Exit mode")
-                me = int(input("You: "))
-                if me == 4:
+                print("[1]_Youtube details mode Interactive\n[2]_Web-scraping details mode Interactive\n[3]_Open-app details mode Interactive\n[4]_Exit mode")
+                me = input("You: ")
+                if "4" in me:
                     speak("Bạn muốn làm gì tiếp?")
                     break
-                elif me == 1:
+                elif "1" in me:
                     speak(f"{thit}")
-                    print("Trực Tiếp Game(1)                Vandiril(9)       Danh sách phim[98]")
-                    print("Muse Việt Nam(2)                 GEARVN(10)        Về mục lựa chọn[99]")
-                    print("Pewdiepie(3)                     Lemuria TFT(11)   .........")
-                    print("AMTECH Studio(4)                 meGAME(12)        .........")
-                    print("League of Legends(5)             AnhEm TV(13)      .........")
-                    print("Kurzgesagt – In a Nutshell(6)    MixiGaming(14)    .........")
-                    print("Shawn TFT(7)                     Phân Tích Game(15)")
-                    print("TNC Channel(8)                   UnusualVideos(16) ")
+                    print("Trực Tiếp Game(1)\tVandiril(9)\tDanh sách phim[98]\nMuse Việt Nam(2)\tGEARVN(10)\tVề mục lựa chọn[99]\nPewdiepie(3)\tLemuria TFT(11)\nAMTECH Studio(4)\tmeGAME(12)\nLeague of Legends(5)\tAnhEm TV(13)\nKurzgesagt(6)\tMixiGaming(14)\nShawn TFT(7)\tPhân Tích Game(15)\nTNC Channel(8)\tUnusualVideos(16)")
                     while True:
                         fcg = "Kênh channel"
                         ytc = int(input("You: "))
@@ -76,9 +66,7 @@ def detailsmod():
                             break
                         elif ytc == 98:
                             speak(f"{thit}")
-                            print("One punch man(1)       Tensei shitara slime datta ken(2)  >NGUỒN: Muse Việt Nam")
-                            print("You laugh you lose(3)  meme review(4)                     >NGUỒN: Pewdiepie")
-                            print("thoát danh sách phát[99]")
+                            print("One punch man(1)\tTensei shitara slime datta ken(2)\t>NGUỒN: Muse Việt Nam\nYou laugh you lose(3)\tmeme review(4)\t>NGUỒN: Pewdiepie\nthoát danh sách phát[99]")
                             while True:
                                 choice = int(input("You: "))
                                 if choice == 99:
@@ -147,13 +135,9 @@ def detailsmod():
                             webbrowser.open("https://www.youtube.com/channel/UCc_gMV4N9vJtpy7GcMUHaVw")                 
                         else:
                             speak(f"{muc}")
-                elif me == 2:
+                elif "2" in me:
                     speak(f"{thit}")
-                    print("Wikipedia(1)    Phim Hàn(5)      Nonolive(9)")
-                    print("Facebook(2)     Gmail(6)         Du lịch online(10)")
-                    print("Animehay.tv(3)  Google Earth(7)  Zalo(11)")
-                    print("Động Phim(4)    Shopee(8)        Python class(12)")
-                    print("...........     ............     Về mục lựa chọn[99]")
+                    print("Wikipedia(1)\tPhim Hàn(5)\tNonolive(9)\nFacebook(2)\tGmail(6)\tDu lịch online(10)\nAnimehay.tv(3)\tGoogle Earth(7)\tZalo(11)\nĐộng Phim(4)\tShopee(8)\tPython class(12)\nVề mục lựa chọn[99]")
                     while True:
                         short = int(input("You: "))
                         if short == 99:
@@ -203,11 +187,9 @@ def detailsmod():
                             webbrowser.open("https://www.howkteam.vn/course/lap-trinh-python-co-ban-37") 
                         else:
                             speak(f"{muc}")
-                elif me == 3:
+                elif "3" in me:
                     speak(f"{thit}")
-                    print("Google Chorme(1)       Garena(4)                       Zoom(7)")
-                    print("Microsoft Egde(2)      League of Legends PBE(5)        ........")
-                    print("Albion Online(3)       Discord(6)                      Về mục lựa chọn[99]")
+                    print("Google Chorme(1)\tGarena(4)\tZoom(7)\nMicrosoft Egde(2)\tLeague of Legends PBE(5)\nAlbion Online(3)\tDiscord(6)\tVề mục lựa chọn[99]")
                     while True:
                         choice = int(input("You: "))
                         if choice == 99:
@@ -242,18 +224,15 @@ def detailsmod():
                             result = subprocess.run(cmd, shell=True)
                         else:
                             speak(f"{muc}")
-                elif me == 5:
+                elif "5" in me:
                     while True:
                         necc = "Đang mở"
-                        speak("Mở kép giữa hai kiểu dữ liệu được mở ở mục ẩn")
                         speak(f"{thit}")
-                        print("#(1)                Cờ giải trí[LMHT_VN]_(3)      ......")
-                        print("Viết học code(2)    Cờ giải trí[LMHT_PBE]_(4)     ......")
-                        print("........            .......                       Về mục lựa chọn[99]")
+                        print("Viết học code(1)\tCờ giải trí[LMHT_VN]_(3)\nCờ giải trí[LMHT_PBE]_(4)\tVề mục lựa chọn[99]")
                         coder = int(input("You: "))
                         if coder == 99:
                             break
-                        elif coder == 2:
+                        elif coder == 1:
                                 speak(necc)
                                 cmd = "C:/Users/this pc/AppData/Local/Programs/Microsoft VS Code/Code.exe"
                                 result = subprocess.run(cmd, shell=True)
@@ -261,13 +240,13 @@ def detailsmod():
                                 webbrowser.open("https://github.com/")
                                 cmd = "C:/Program Files/Google/Chrome/Application/chrome.exe"
                                 result = subprocess.run(cmd, shell=True)
-                        elif coder == 3:
+                        elif coder == 2:
                             speak(necc)
                             cmd = "C:/Program Files (x86)/Garena/Garena/Garena.exe"
                             result = subprocess.run(cmd, shell=True)
                             webbrowser.open("https://www.facebook.com/")
                             webbrowser.open("https://www.youtube.com/")
-                        elif coder == 4:
+                        elif coder == 3:
                             speak(necc)
                             cmd = "D:/Riot Games/Riot Client/RiotClientServices.exe"
                             result = subprocess.run(cmd, shell=True)
@@ -286,8 +265,7 @@ def google():
            break
        url=f"https://www.google.com/search?q={search}"
        webbrowser.get().open(url)
-       speak(f"Đây là kết quả mà tôi tìm kiếm được, với từ khóa {search}")
-       speak("[hủy tìm kiếm] nếu bạn không muốn tiếp tục tìm kiếm qua google")
+       speak(f"Đây là kết quả mà tôi tìm kiếm được, với từ khóa {search}\n[hủy tìm kiếm] nếu bạn không muốn tiếp tục tìm kiếm qua google")
 def youtube():
     speak("Bạn muốn tìm kiếm gì ở youtube?")
     while True:
@@ -297,8 +275,7 @@ def youtube():
             break
         url=f"https://www.youtube.com/search?q={search}"
         webbrowser.get().open(url)
-        speak(f"Đây là kết quả mà tôi tìm kiếm được, với từ khóa {search}")
-        speak("[hủy tìm kiếm] nếu bạn không muốn tiếp tục tìm kiếm qua youtube")
+        speak(f"Đây là kết quả mà tôi tìm kiếm được, với từ khóa {search}\n[hủy tìm kiếm] nếu bạn không muốn tiếp tục tìm kiếm qua youtube")
 def get_choices(choice):
     if choice == "B":
         return "Búa"
@@ -309,8 +286,7 @@ def get_choices(choice):
     else:
         return speak("Không đúng với từ khóa đã cho!")
 def game():
-    speak("Chào mừng đến với trò búa giấy kéo!")
-    speak("[B] là búa, [G] là giấy, [K] là kéo và [Q] là thoát trò chơi")
+    speak("Chào mừng đến với trò búa giấy kéo!\n[B] là búa, [G] là giấy, [K] là kéo và [Q] là thoát trò chơi")
 
     choices = ["B", "G", "K"]
     counter = 1
@@ -360,16 +336,16 @@ def bye():
     elif hour >=18 and hour<24:
         speak("Chúc bạn buổi tối tốt lành")
 def wellcome():
+    hii = 'Tôi là trợ lí ảo Asis, tôi có thể làm gì cho bạn?'
     hour = datetime.now().hour
     if hour >=6 and hour<12:
-        speak("Chào buổi sáng")
+        speak(f"Chào buổi sáng\n{hii}")
     elif hour >=12 and hour<14:
-        speak("Chào buổi trưa")
+        speak(f"Chào buổi trưa\n{hii}")
     elif hour >=14 and hour<18:
-        speak("Chào buổi chiều")
+        speak(f"Chào buổi chiều\n{hii}")
     elif hour >=18 and hour<24:
-        speak("Chào buổi tối")
-    speak('Tôi là trợ lí ảo Asis, tôi có thể làm gì cho bạn?')
+        speak(f"Chào buổi tối\n{hii}")
 
 if __name__ =="__main__":
     wellcome()
@@ -396,7 +372,6 @@ if __name__ =="__main__":
         elif "tắt laptop" in you:
             shutdownprograms()
         else:
-            speak(f"Từ khóa [{you}] này không nằm trong khả năng của tôi")
-            speak("Bạn muốn làm gì tiếp?")
+            speak(f"Từ khóa [{you}] này không nằm trong khả năng của tôi\nBạn muốn làm gì tiếp?")
         
         
