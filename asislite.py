@@ -1,35 +1,83 @@
-from datetime import date
-from datetime import datetime 
-import random
-import webbrowser
-import subprocess
-import os
-import pyttsx3
-import wikipediaapi
-import sys
+from datetime import date   #Thư viện thời gian
+from datetime import datetime #Thư viện thời gian
+import random #Thư viện ngẫu số
+import webbrowser #Thư viện cào web
+import subprocess #Thư viện mở tệp trong ổ đĩa
+import os #Thư viện hệ thống
+import pyttsx3 #Thư viện giọng nói
+import wikipediaapi #Thư viện wikipedia
+import sys #Thư viện hệ thống
 
+# giọng nói trợ lí
 asis = pyttsx3.init()
 voices = asis.getProperty("voices")
 asis.setProperty("voice",voices[1].id)
-
+# wiki api
 wikipediaapi.log.setLevel(level=wikipediaapi.logging.DEBUG)
 out_hdlr = wikipediaapi.logging.StreamHandler(sys.stderr)
 out_hdlr.setFormatter(wikipediaapi.logging.Formatter('%(asctime)s %(message)s'))
 out_hdlr.setLevel(wikipediaapi.logging.DEBUG)
 wikipediaapi.log.addHandler(out_hdlr)
 wiki = wikipediaapi.Wikipedia(language='vi')
-
+# Các hàm lệnh:
 def speak(audio):
     print('Asis: ' + audio)
     asis.say(audio)
     asis.runAndWait()
-def thời_gian():
+def giờ_phút():
     giờ = datetime.now().strftime("%I")
     phút = datetime.now().strftime("%M")
     speak(F"Bây giờ là {giờ} giờ {phút} phút")
 def ngày():
-    days = datetime.now().strftime("%d/%m/%Y")
+    days = datetime.now().strftime("%d")
     speak(f"Hôm nay là ngày {days}")  
+def thứ():
+    lop = "Hôm nay là thứ"
+    thứ = datetime.now().strftime("%A")
+    if "Monday" in thứ:
+        speak(f"{lop} hai!")
+    elif "Tuesday" in thứ:
+        speak(f"{lop} ba")
+    elif "Wednesday" in thứ:
+        speak(f"{lop} tư")
+    elif "Thursday" in thứ:
+        speak(f"{lop} năm")
+    elif "Friday" in thứ:
+        speak(f"{lop} sáu")
+    elif "Saturday" in thứ:
+        speak(f"{lop} bảy")
+    elif "Sunday" in thứ:
+        speak("Hôm nay là chủ nhật")
+def tháng():
+    tháng = datetime.now().strftime("%B")
+    lop = "Hôm nay là tháng"
+    if "January" in tháng:
+        speak(f"{lop} một!")
+    elif "February" in tháng:
+        speak(f"{lop} hai")
+    elif "March" in tháng:
+        speak(f"{lop} ba")
+    elif "April" in tháng:
+        speak(f"{lop} tư")
+    elif "May" in tháng:
+        speak(f"{lop} năm")
+    elif "June" in tháng:
+        speak(f"{lop} sáu")
+    elif "July" in tháng:
+        speak(f"{lop} bảy")
+    elif "August" in tháng:
+        speak(f"{lop} tám")
+    elif "September" in tháng:
+        speak(f"{lop} chín")
+    elif "October" in tháng:
+        speak(f"{lop} mười")
+    elif "November" in tháng:
+        speak(f"{lop} mười một")
+    elif "December" in tháng:
+        speak(f"{lop} mười hai")
+def năm():
+    năm = datetime.now().strftime("%Y")
+    speak(f"Năm nay là năm {năm}")
 def shutdownprograms():
     while True:
         speak("Bạn có muốn tắt máy tính không? [có] hoặc [không]")
@@ -229,10 +277,10 @@ def detailsmod():
                         necc = "Đang mở"
                         speak(f"{thit}")
                         print("Viết học code(1)\tCờ giải trí[LMHT_VN]_(3)\nCờ giải trí[LMHT_PBE]_(4)\tVề mục lựa chọn[99]")
-                        coder = int(input("You: "))
+                        coder = input("You: ")
                         if coder == 99:
                             break
-                        elif coder == 1:
+                        elif coder == "1":
                                 speak(necc)
                                 cmd = "C:/Users/this pc/AppData/Local/Programs/Microsoft VS Code/Code.exe"
                                 result = subprocess.run(cmd, shell=True)
@@ -240,13 +288,13 @@ def detailsmod():
                                 webbrowser.open("https://github.com/")
                                 cmd = "C:/Program Files/Google/Chrome/Application/chrome.exe"
                                 result = subprocess.run(cmd, shell=True)
-                        elif coder == 2:
+                        elif coder == "2":
                             speak(necc)
                             cmd = "C:/Program Files (x86)/Garena/Garena/Garena.exe"
                             result = subprocess.run(cmd, shell=True)
                             webbrowser.open("https://www.facebook.com/")
                             webbrowser.open("https://www.youtube.com/")
-                        elif coder == 3:
+                        elif coder == "3":
                             speak(necc)
                             cmd = "D:/Riot Games/Riot Client/RiotClientServices.exe"
                             result = subprocess.run(cmd, shell=True)
@@ -336,7 +384,7 @@ def bye():
     elif hour >=18 and hour<24:
         speak("Chúc bạn buổi tối tốt lành")
 def wellcome():
-    hii = 'Tôi là trợ lí ảo Asis, tôi có thể làm gì cho bạn?'
+    hii = 'Đây là trợ lí ảo Asis, tôi có thể làm gì cho bạn?'
     hour = datetime.now().hour
     if hour >=6 and hour<12:
         speak(f"Chào buổi sáng\n{hii}")
@@ -346,32 +394,36 @@ def wellcome():
         speak(f"Chào buổi chiều\n{hii}")
     elif hour >=18 and hour<24:
         speak(f"Chào buổi tối\n{hii}")
-
+# Nơi gán hàm và các câu lệnh cũng như vòng lặp để khởi động chương trình
 if __name__ =="__main__":
-    wellcome()
+    wellcome() #lời chào
     while True:
-        you = input("You: ").lower()
-        if "bye" in you:
+        you = input("You: ").lower() #Phương thức tương tác
+        if "bye" in you: #Lời tạm biệt
             bye()
             break
+        elif "giờ" in you: 
+            giờ_phút()
+        elif "thứ" in you:
+            thứ()
         elif "ngày" in you:
             ngày()
-        elif "trò chơi" in you:
+        elif "tháng" in you:
+            tháng()
+        elif "năm" in you:
+            năm()
+        elif "trò chơi" in you: #Trò búa kéo bao
             game()
             speak("Bạn muốn làm gì tiếp?")
-        elif "giờ" in you:
-            thời_gian()
-        elif "thời gian" in you:
-            thời_gian()
-        elif "google" in you:
+        elif "google" in you: #mục tìm kiếm thông tin trên google
             google()
-        elif "youtube" in you:
+        elif "youtube" in you: #mục tìm kiếm thông tin trên youtube
             youtube()
-        elif "mode" in you:
+        elif "mode" in you: #chế độ tương tác các nội dung đc phổ cập chính(tạm thời)
             detailsmod()
-        elif "tắt laptop" in you:
+        elif "tắt laptop" in you: #chế độ tắt máy tính
             shutdownprograms()
         else:
-            speak(f"Từ khóa [{you}] này không nằm trong khả năng của tôi\nBạn muốn làm gì tiếp?")
+            speak(f"Từ khóa [{you}] này không nằm trong khả năng của tôi\nBạn muốn làm gì tiếp?") #Các trả lời khi không có các tương tác liên quan hoặc sai từ
         
         
